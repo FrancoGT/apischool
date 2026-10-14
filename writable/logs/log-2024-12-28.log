@@ -1,0 +1,274 @@
+ERROR - 2024-12-28 15:40:54 --> mysqli_sql_exception: Table 'api_school.curso_grado' doesn't exist in C:\xampp\htdocs\apischool\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\apischool\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `cu...', 0)
+#1 C:\xampp\htdocs\apischool\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `cu...')
+#2 C:\xampp\htdocs\apischool\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `cu...')
+#3 C:\xampp\htdocs\apischool\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `cu...', NULL, false)
+#4 C:\xampp\htdocs\apischool\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\apischool\app\Database\Seeds\CursoGradoSeeder.php(977): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\apischool\system\Database\Seeder.php(147): App\Database\Seeds\CursoGradoSeeder->run()
+#7 C:\xampp\htdocs\apischool\app\Database\Seeds\AllSeeders.php(22): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\xampp\htdocs\apischool\system\Database\Seeder.php(147): App\Database\Seeds\AllSeeders->run()
+#9 C:\xampp\htdocs\apischool\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#10 C:\xampp\htdocs\apischool\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#11 C:\xampp\htdocs\apischool\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#12 C:\xampp\htdocs\apischool\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#13 C:\xampp\htdocs\apischool\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#14 C:\xampp\htdocs\apischool\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#15 {main}
+ERROR - 2024-12-28 15:42:41 --> mysqli_sql_exception: Can't create table `api_school`.`curso_grado` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\apischool\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\apischool\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `c...', 0)
+#1 C:\xampp\htdocs\apischool\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 C:\xampp\htdocs\apischool\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 C:\xampp\htdocs\apischool\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 C:\xampp\htdocs\apischool\app\Database\Migrations\2024-12-28-144752_CreateCursoGradoTable.php(44): CodeIgniter\Database\Forge->createTable('curso_grado')
+#5 C:\xampp\htdocs\apischool\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateCursoGradoTable->up()
+#6 C:\xampp\htdocs\apischool\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\apischool\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\apischool\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\apischool\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\apischool\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\apischool\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\apischool\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-12-28 15:48:51 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'api_school' in C:\xampp\htdocs\apischool\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\apischool\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'api_school', 3306, '', 0)
+#1 C:\xampp\htdocs\apischool\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\apischool\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\apischool\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\apischool\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\apischool\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\xampp\htdocs\apischool\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\apischool\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\apischool\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\apischool\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\apischool\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\apischool\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\apischool\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'api_school' in C:\xampp\htdocs\apischool\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\apischool\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\apischool\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\apischool\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\apischool\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\apischool\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\xampp\htdocs\apischool\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\apischool\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\apischool\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\htdocs\apischool\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\htdocs\apischool\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 C:\xampp\htdocs\apischool\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\xampp\htdocs\apischool\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-12-28 18:07:34 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`api_school`.`competencias`, CONSTRAINT `competencias_idUnidad_foreign` FOREIGN KEY (`idUnidad`) REFERENCES `unidad` (`idUnidad`)) in C:\xampp\htdocs\apischool\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\apischool\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\apischool\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\apischool\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\apischool\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', NULL, false)
+#4 C:\xampp\htdocs\apischool\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\apischool\app\Database\Seeds\CompetenciaSeeder.php(135): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\xampp\htdocs\apischool\system\Database\Seeder.php(147): App\Database\Seeds\CompetenciaSeeder->run()
+#7 C:\xampp\htdocs\apischool\app\Database\Seeds\AllSeeders.php(25): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\xampp\htdocs\apischool\system\Database\Seeder.php(147): App\Database\Seeds\AllSeeders->run()
+#9 C:\xampp\htdocs\apischool\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#10 C:\xampp\htdocs\apischool\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#11 C:\xampp\htdocs\apischool\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#12 C:\xampp\htdocs\apischool\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#13 C:\xampp\htdocs\apischool\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#14 C:\xampp\htdocs\apischool\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#15 {main}
+ERROR - 2024-12-28 21:13:33 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'api_school' in C:\laragon2\www\apischool\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\laragon2\www\apischool\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'api_school', 3306, '', 0)
+#1 C:\laragon2\www\apischool\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon2\www\apischool\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon2\www\apischool\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\laragon2\www\apischool\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\laragon2\www\apischool\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\laragon2\www\apischool\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\laragon2\www\apischool\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon2\www\apischool\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon2\www\apischool\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon2\www\apischool\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\laragon2\www\apischool\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\laragon2\www\apischool\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'api_school' in C:\laragon2\www\apischool\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon2\www\apischool\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon2\www\apischool\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon2\www\apischool\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\laragon2\www\apischool\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\laragon2\www\apischool\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\laragon2\www\apischool\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\laragon2\www\apischool\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\laragon2\www\apischool\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\laragon2\www\apischool\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\laragon2\www\apischool\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 C:\laragon2\www\apischool\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\laragon2\www\apischool\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-12-28 21:15:45 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`api_school`.`competencias`, CONSTRAINT `competencias_idUnidad_foreign` FOREIGN KEY (`idUnidad`) REFERENCES `unidad` (`idUnidad`)) in C:\laragon2\www\apischool\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon2\www\apischool\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\laragon2\www\apischool\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\laragon2\www\apischool\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\laragon2\www\apischool\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', NULL, false)
+#4 C:\laragon2\www\apischool\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\laragon2\www\apischool\app\Database\Seeds\CompetenciaSeeder.php(135): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\laragon2\www\apischool\system\Database\Seeder.php(147): App\Database\Seeds\CompetenciaSeeder->run()
+#7 C:\laragon2\www\apischool\app\Database\Seeds\AllSeeders.php(25): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\laragon2\www\apischool\system\Database\Seeder.php(147): App\Database\Seeds\AllSeeders->run()
+#9 C:\laragon2\www\apischool\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#10 C:\laragon2\www\apischool\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#11 C:\laragon2\www\apischool\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#12 C:\laragon2\www\apischool\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#13 C:\laragon2\www\apischool\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#14 C:\laragon2\www\apischool\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#15 {main}
+ERROR - 2024-12-28 21:29:47 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`api_school`.`competencias`, CONSTRAINT `competencias_idUnidad_foreign` FOREIGN KEY (`idUnidad`) REFERENCES `unidad` (`idUnidad`)) in C:\laragon2\www\apischool\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon2\www\apischool\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\laragon2\www\apischool\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\laragon2\www\apischool\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\laragon2\www\apischool\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', NULL, false)
+#4 C:\laragon2\www\apischool\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\laragon2\www\apischool\app\Database\Seeds\CompetenciaSeeder.php(135): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\laragon2\www\apischool\system\Database\Seeder.php(147): App\Database\Seeds\CompetenciaSeeder->run()
+#7 C:\laragon2\www\apischool\app\Database\Seeds\AllSeeders.php(25): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\laragon2\www\apischool\system\Database\Seeder.php(147): App\Database\Seeds\AllSeeders->run()
+#9 C:\laragon2\www\apischool\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#10 C:\laragon2\www\apischool\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#11 C:\laragon2\www\apischool\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#12 C:\laragon2\www\apischool\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#13 C:\laragon2\www\apischool\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#14 C:\laragon2\www\apischool\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#15 {main}
+ERROR - 2024-12-28 22:27:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`descripcionCompetencia`, `unidades`.`descripcionUnidad`, `bimestres`.`descripc' at line 1 in C:\laragon2\www\apischool\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon2\www\apischool\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `compete...', 0)
+#1 C:\laragon2\www\apischool\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `compete...')
+#2 C:\laragon2\www\apischool\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `compete...')
+#3 C:\laragon2\www\apischool\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `compete...', Array, false)
+#4 C:\laragon2\www\apischool\app\Models\CompetenciaModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon2\www\apischool\app\Controllers\API\CompetenciaController.php(21): App\Models\CompetenciaModel->getCompetenciasWithJoin()
+#6 C:\laragon2\www\apischool\system\CodeIgniter.php(933): App\Controllers\API\CompetenciaController->index()
+#7 C:\laragon2\www\apischool\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CompetenciaController))
+#8 C:\laragon2\www\apischool\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon2\www\apischool\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon2\www\apischool\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon2\www\apischool\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon2\www\apischool\system\rewrite.php(44): require_once('C:\\laragon2\\www...')
+#13 {main}
+CRITICAL - 2024-12-28 22:27:27 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`descripcionCompetencia`, `unidades`.`descripcionUnidad`, `bimestres`.`descripc' at line 1
+[Method: GET, Route: api/competencias]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `competencias`.`idCompetencia`, `competencias`.`idUnidad`, `// Añadir el idUnidad en la consulta` `competencias`.`descripcionCompetencia`, `unidades`.`descripcionUnidad`, `bimestres`.`descripcionBimestre`, `cursos`.`descripcionCurso`, `grados`.`descripcionGrado`, `niveles`.`descripcionNivel`, `areas`.`descripcionArea`
+FROM `competencias`
+INNER JOIN `unidad` AS `unidades` ON `competencias`.`idUnidad` = `unidades`.`idUnidad`
+INNER JOIN `bimestre` AS `bimestres` ON `unidades`.`idBimestre` = `bimestres`.`idBimestre`
+INNER JOIN `curso_grado` AS `curso_grado` ON `bimestres`.`idCursoGrado` = `curso_grado`.`idCursoGrado`
+INNER JOIN `curso` AS `cursos` ON `curso_grado`.`idCurso` = `cursos`.`idCurso`
+INNER JOIN `grado` AS `grados` ON `curso_grado`.`idGrado` = `grados`.`idGrado`
+INNER JOIN `nivel` AS `niveles` ON `grados`.`idNivel` = `niveles`.`idNivel`
+INNER JOIN `area` AS `areas` ON `cursos`.`idArea` = `areas`.`idArea`', [], false)
+ 2 APPPATH\Models\CompetenciaModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\API\CompetenciaController.php(21): App\Models\CompetenciaModel->getCompetenciasWithJoin()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\CompetenciaController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CompetenciaController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon2\\www\\apischool\\public\\index.php')
+CRITICAL - 2024-12-28 22:27:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`descripcionCompetencia`, `unidades`.`descripcionUnidad`, `bimestres`.`descripc' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `competencias`.`idCompetencia`, `competencias`.`idUnidad`, `// Añadir el idUnidad en la consulta` `competencias`.`descripcionCompetencia`, `unidades`.`descripcionUnidad`, `bimestres`.`descripcionBimestre`, `cursos`.`descripcionCurso`, `grados`.`descripcionGrado`, `niveles`.`descripcionNivel`, `areas`.`descripcionArea`
+FROM `competencias`
+INNER JOIN `unidad` AS `unidades` ON `competencias`.`idUnidad` = `unidades`.`idUnidad`
+INNER JOIN `bimestre` AS `bimestres` ON `unidades`.`idBimestre` = `bimestres`.`idBimestre`
+INNER JOIN `curso_grado` AS `curso_grado` ON `bimestres`.`idCursoGrado` = `curso_grado`.`idCursoGrado`
+INNER JOIN `curso` AS `cursos` ON `curso_grado`.`idCurso` = `cursos`.`idCurso`
+INNER JOIN `grado` AS `grados` ON `curso_grado`.`idGrado` = `grados`.`idGrado`
+INNER JOIN `nivel` AS `niveles` ON `grados`.`idNivel` = `niveles`.`idNivel`
+INNER JOIN `area` AS `areas` ON `cursos`.`idArea` = `areas`.`idArea`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `competencias`.`idCompetencia`, `competencias`.`idUnidad`, `// Añadir el idUnidad en la consulta` `competencias`.`descripcionCompetencia`, `unidades`.`descripcionUnidad`, `bimestres`.`descripcionBimestre`, `cursos`.`descripcionCurso`, `grados`.`descripcionGrado`, `niveles`.`descripcionNivel`, `areas`.`descripcionArea`
+FROM `competencias`
+INNER JOIN `unidad` AS `unidades` ON `competencias`.`idUnidad` = `unidades`.`idUnidad`
+INNER JOIN `bimestre` AS `bimestres` ON `unidades`.`idBimestre` = `bimestres`.`idBimestre`
+INNER JOIN `curso_grado` AS `curso_grado` ON `bimestres`.`idCursoGrado` = `curso_grado`.`idCursoGrado`
+INNER JOIN `curso` AS `cursos` ON `curso_grado`.`idCurso` = `cursos`.`idCurso`
+INNER JOIN `grado` AS `grados` ON `curso_grado`.`idGrado` = `grados`.`idGrado`
+INNER JOIN `nivel` AS `niveles` ON `grados`.`idNivel` = `niveles`.`idNivel`
+INNER JOIN `area` AS `areas` ON `cursos`.`idArea` = `areas`.`idArea`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `competencias`.`idCompetencia`, `competencias`.`idUnidad`, `// Añadir el idUnidad en la consulta` `competencias`.`descripcionCompetencia`, `unidades`.`descripcionUnidad`, `bimestres`.`descripcionBimestre`, `cursos`.`descripcionCurso`, `grados`.`descripcionGrado`, `niveles`.`descripcionNivel`, `areas`.`descripcionArea`
+FROM `competencias`
+INNER JOIN `unidad` AS `unidades` ON `competencias`.`idUnidad` = `unidades`.`idUnidad`
+INNER JOIN `bimestre` AS `bimestres` ON `unidades`.`idBimestre` = `bimestres`.`idBimestre`
+INNER JOIN `curso_grado` AS `curso_grado` ON `bimestres`.`idCursoGrado` = `curso_grado`.`idCursoGrado`
+INNER JOIN `curso` AS `cursos` ON `curso_grado`.`idCurso` = `cursos`.`idCurso`
+INNER JOIN `grado` AS `grados` ON `curso_grado`.`idGrado` = `grados`.`idGrado`
+INNER JOIN `nivel` AS `niveles` ON `grados`.`idNivel` = `niveles`.`idNivel`
+INNER JOIN `area` AS `areas` ON `cursos`.`idArea` = `areas`.`idArea`', [], false)
+ 4 APPPATH\Models\CompetenciaModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\API\CompetenciaController.php(21): App\Models\CompetenciaModel->getCompetenciasWithJoin()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\CompetenciaController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CompetenciaController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon2\\www\\apischool\\public\\index.php')
+CRITICAL - 2024-12-28 22:27:27 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`descripcionCompetencia`, `unidades`.`descripcionUnidad`, `bimestres`.`descripc' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `competencias`.`idCompetencia`, `competencias`.`idUnidad`, `// Añadir el idUnidad en la consulta` `competencias`.`descripcionCompetencia`, `unidades`.`descripcionUnidad`, `bimestres`.`descripcionBimestre`, `cursos`.`descripcionCurso`, `grados`.`descripcionGrado`, `niveles`.`descripcionNivel`, `areas`.`descripcionArea`
+FROM `competencias`
+INNER JOIN `unidad` AS `unidades` ON `competencias`.`idUnidad` = `unidades`.`idUnidad`
+INNER JOIN `bimestre` AS `bimestres` ON `unidades`.`idBimestre` = `bimestres`.`idBimestre`
+INNER JOIN `curso_grado` AS `curso_grado` ON `bimestres`.`idCursoGrado` = `curso_grado`.`idCursoGrado`
+INNER JOIN `curso` AS `cursos` ON `curso_grado`.`idCurso` = `cursos`.`idCurso`
+INNER JOIN `grado` AS `grados` ON `curso_grado`.`idGrado` = `grados`.`idGrado`
+INNER JOIN `nivel` AS `niveles` ON `grados`.`idNivel` = `niveles`.`idNivel`
+INNER JOIN `area` AS `areas` ON `cursos`.`idArea` = `areas`.`idArea`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `competencias`.`idCompetencia`, `competencias`.`idUnidad`, `// Añadir el idUnidad en la consulta` `competencias`.`descripcionCompetencia`, `unidades`.`descripcionUnidad`, `bimestres`.`descripcionBimestre`, `cursos`.`descripcionCurso`, `grados`.`descripcionGrado`, `niveles`.`descripcionNivel`, `areas`.`descripcionArea`
+FROM `competencias`
+INNER JOIN `unidad` AS `unidades` ON `competencias`.`idUnidad` = `unidades`.`idUnidad`
+INNER JOIN `bimestre` AS `bimestres` ON `unidades`.`idBimestre` = `bimestres`.`idBimestre`
+INNER JOIN `curso_grado` AS `curso_grado` ON `bimestres`.`idCursoGrado` = `curso_grado`.`idCursoGrado`
+INNER JOIN `curso` AS `cursos` ON `curso_grado`.`idCurso` = `cursos`.`idCurso`
+INNER JOIN `grado` AS `grados` ON `curso_grado`.`idGrado` = `grados`.`idGrado`
+INNER JOIN `nivel` AS `niveles` ON `grados`.`idNivel` = `niveles`.`idNivel`
+INNER JOIN `area` AS `areas` ON `cursos`.`idArea` = `areas`.`idArea`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `competencias`.`idCompetencia`, `competencias`.`idUnidad`, `// Añadir el idUnidad en la consulta` `competencias`.`descripcionCompetencia`, `unidades`.`descripcionUnidad`, `bimestres`.`descripcionBimestre`, `cursos`.`descripcionCurso`, `grados`.`descripcionGrado`, `niveles`.`descripcionNivel`, `areas`.`descripcionArea`
+FROM `competencias`
+INNER JOIN `unidad` AS `unidades` ON `competencias`.`idUnidad` = `unidades`.`idUnidad`
+INNER JOIN `bimestre` AS `bimestres` ON `unidades`.`idBimestre` = `bimestres`.`idBimestre`
+INNER JOIN `curso_grado` AS `curso_grado` ON `bimestres`.`idCursoGrado` = `curso_grado`.`idCursoGrado`
+INNER JOIN `curso` AS `cursos` ON `curso_grado`.`idCurso` = `cursos`.`idCurso`
+INNER JOIN `grado` AS `grados` ON `curso_grado`.`idGrado` = `grados`.`idGrado`
+INNER JOIN `nivel` AS `niveles` ON `grados`.`idNivel` = `niveles`.`idNivel`
+INNER JOIN `area` AS `areas` ON `cursos`.`idArea` = `areas`.`idArea`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `competencias`.`idCompetencia`, `competencias`.`idUnidad`, `// Añadir el idUnidad en la consulta` `competencias`.`descripcionCompetencia`, `unidades`.`descripcionUnidad`, `bimestres`.`descripcionBimestre`, `cursos`.`descripcionCurso`, `grados`.`descripcionGrado`, `niveles`.`descripcionNivel`, `areas`.`descripcionArea`
+FROM `competencias`
+INNER JOIN `unidad` AS `unidades` ON `competencias`.`idUnidad` = `unidades`.`idUnidad`
+INNER JOIN `bimestre` AS `bimestres` ON `unidades`.`idBimestre` = `bimestres`.`idBimestre`
+INNER JOIN `curso_grado` AS `curso_grado` ON `bimestres`.`idCursoGrado` = `curso_grado`.`idCursoGrado`
+INNER JOIN `curso` AS `cursos` ON `curso_grado`.`idCurso` = `cursos`.`idCurso`
+INNER JOIN `grado` AS `grados` ON `curso_grado`.`idGrado` = `grados`.`idGrado`
+INNER JOIN `nivel` AS `niveles` ON `grados`.`idNivel` = `niveles`.`idNivel`
+INNER JOIN `area` AS `areas` ON `cursos`.`idArea` = `areas`.`idArea`', [], false)
+ 5 APPPATH\Models\CompetenciaModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\API\CompetenciaController.php(21): App\Models\CompetenciaModel->getCompetenciasWithJoin()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\API\CompetenciaController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CompetenciaController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon2\\www\\apischool\\public\\index.php')
